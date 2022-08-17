@@ -4,10 +4,11 @@ class Control:
     def __init__(self):
         self.metodo = Model() #Instanciando a Classe Model
         self.opcao = -1
+        self.contador = 1
 
 
     def menu(self):
-        print("Escolha umas das opções abaixo:  \n\n" +
+        print("\nEscolha umas das opções abaixo:  \n\n" +
               "0. Sair \n" +
               "1. Exercicio 1\n" +
               "2. Exercicio 2\n" +
@@ -80,3 +81,96 @@ class Control:
                 print(self.metodo.exercicio5(eleitores, brancos, nulos, validos))
 
             elif self.opcao == 6:
+                print("Digite o Salário atual: \n")
+                salario = float(input())
+                print("Digite o percentual de reajuste: \n")
+                reajuste = int(input())
+                print("O novo salario é: ")
+                print(self.metodo.exercicio6(salario, reajuste))
+
+            elif self.opcao == 7:
+                print("Digite o valor de custo do carro: \n")
+                valorCusto = float(input())
+                print("O valor do Carro ao consumidor é de: ")
+                print(self.metodo.exercicio7(valorCusto))
+
+            elif self.opcao == 8:
+                print("Digite a primeira nota: \n")
+                nota1 = int(input())
+                print("Digite a segunda nota: \n")
+                nota2 = int(input())
+                print("Digite a terceira nota: \n")
+                nota3 = int(input())
+                print("A média ficou: ")
+                print(self.metodo.exercicio8(nota1, nota2, nota3))
+
+            elif self.opcao == 9:
+                print("Digite o total de maçãs: \n")
+                macas = int(input())
+                print("O valor total ficou: R$")
+                print(self.metodo.exercicio9(macas))
+
+            elif self.opcao == 11:
+                print("Digite o salário fixo: \n")
+                salarioFixo = float(input())
+                print("Digite o valor das vendas do vendedor: \n")
+                vendas = float(input())
+                print("O salário atual ficou: R$")
+                print(self.metodo.exercicio11(salarioFixo, vendas))
+
+            elif self.opcao == 12:
+                print("Digite a conta do cliente: \n")
+                conta = int(input())
+                print("Digite o saldo atual: \n")
+                saldo = float(input())
+                print("Digite o Débito: \n")
+                debito = float(input())
+                print("Digite o Crédito: \n")
+                credito = float(input())
+                print("O saldo ficou: \n")
+                print(self.metodo.exercicio12(conta, saldo, debito,credito))
+
+            elif self.opcao == 13:
+                print("Digite um numero de 1 a 10: \n")
+                num = int(input())
+                while (num < 1) or (num > 10):
+                    print("Valor incorreto!!!\nDigite Novamente: ")
+                    num = int(input())
+                print("A tabuada é: \n")
+                print(self.metodo.exercicio13(num))
+
+            elif self.opcao == 14:
+                print("Digite um valor inteiro maior que Zero: \n")
+                num = int(input())
+                while num <= 0:
+                    print("Valor Incorreto!!!\nDigite Novamente: ")
+                    num = int(input())
+                print("Os valores são: ")
+                print(self.metodo.exercicio14(num))
+
+            elif self.opcao == 15:
+                while self.contador < 10:
+                    print("\nDigite um numero: \n")
+                    num = int(input())
+                    self.contador = self.contador + 1
+                    print(self.metodo.exercicio15(num))
+
+            elif self.opcao == 16:
+                while self.contador < 10:
+                    print("\nDigite um numero: \n")
+                    num = int(input())
+                    self.contador = self.contador + 1
+                    print(self.metodo.exercicio16(num))
+
+            elif self.opcao == 17:
+                print("A media aritmétrica de 15 a 100 é: \n")
+                print(self.metodo.exercicio17())
+
+            elif self.opcao == 18:
+                self.contador = 0
+                while self.contador < 10:
+                    self.contador = self.contador + 1
+                    print("Digite um numero: \n")
+                    num = int(input())
+                    print(num)
+                    print(self.metodo.exercicio18(num))
