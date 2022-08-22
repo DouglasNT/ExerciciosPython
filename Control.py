@@ -110,6 +110,17 @@ class Control:
                 print("O valor total ficou: R$")
                 print(self.metodo.exercicio9(macas))
 
+            elif self.opcao == 10:
+                i = 0
+                for i in range(10):
+                    print("Informe o {}º número: ".format(i+1))
+                    self.metodo.preencherVetor(int(input()))
+                print("\nSem ordenação!")
+                self.metodo.visualizarVetor()
+
+                print("\nCom ordenação!")
+                self.metodo.ordenar()
+
             elif self.opcao == 11:
                 print("Digite o salário fixo: \n")
                 salarioFixo = float(input())

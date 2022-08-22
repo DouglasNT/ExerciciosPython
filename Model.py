@@ -26,6 +26,7 @@ class Model:
         self.contador = 0
         self.soma = 0
         self.arit = 0
+        self.vetor = [] #Está variável é um Array
 
     #Métodos de Acesso
 
@@ -269,6 +270,26 @@ class Model:
             self.totalMacas = self.getMacas() * 1.3
 
         return self.totalMacas
+
+#Exercicio 10:
+    def preencherVetor(self, num):
+        self.vetor.append(num) #incluindo dados no Vetor
+
+    def visualizarVetor(self):
+        for i in range(len(self.vetor)):
+            print("{}º número: {}\n".format(i+1,self.vetor[i]))
+
+    def ordenar(self):
+        self.vetor.sort() #O elemento "sort" ira ordenar em ordem crescente o vetor
+        self.visualizarVetor()
+
+    def excluir(self, posicao):
+        self.vetor.pop(posicao)
+        self.visualizarVetor()
+
+    def incluir(self, posicao, num):
+        self.vetor[posicao].append(num)
+
 
 #Exercicio 11:
     def exercicio11(self, salarioFixo,vendas):
